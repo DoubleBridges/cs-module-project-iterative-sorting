@@ -39,7 +39,7 @@ def bubble_sort(arr):
     return arr
 
 
-'''
+"""
 STRETCH: implement the Count Sort function below
 
 Counting sort is a sorting algorithm that works on a set of data where
@@ -55,10 +55,23 @@ showed up, we can construct a sorted set of the input data from the
 buckets. 
 
 What is the time and space complexity of the counting sort algorithm?
-'''
+"""
 
 
-def counting_sort(arr, maximum=None):
+def count_sort(arr, maximum):
     # Your code here
+    count_list = [0] * maximum
+
+    for val in range(0, len(arr) - 1):
+        count_list[val] = +1
+
+    sorted = []
+
+    for val in count_list:
+        if val != 0:
+            for i in range(val):
+                sorted.append(val)
+
+    arr = sorted
 
     return arr
